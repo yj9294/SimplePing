@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8023F1B56FFC7A1C24B8482D /* Pods_SimplePingExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD193A531CFFDD17D0A0D8D7 /* Pods_SimplePingExample.framework */; };
 		C7118EFE2919EDB000C0D101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7118EFD2919EDB000C0D101 /* AppDelegate.swift */; };
 		C7118F002919EDB000C0D101 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7118EFF2919EDB000C0D101 /* SceneDelegate.swift */; };
 		C7118F022919EDB000C0D101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7118F012919EDB000C0D101 /* ViewController.swift */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		005E1D602CDBD003CB5A823B /* Pods-SimplePingExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePingExample.release.xcconfig"; path = "Target Support Files/Pods-SimplePingExample/Pods-SimplePingExample.release.xcconfig"; sourceTree = "<group>"; };
+		A72100309961CE6872C61ACF /* Pods-SimplePingExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimplePingExample.debug.xcconfig"; path = "Target Support Files/Pods-SimplePingExample/Pods-SimplePingExample.debug.xcconfig"; sourceTree = "<group>"; };
+		BD193A531CFFDD17D0A0D8D7 /* Pods_SimplePingExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimplePingExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7118EFA2919EDB000C0D101 /* SimplePingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimplePingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7118EFD2919EDB000C0D101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7118EFF2919EDB000C0D101 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8023F1B56FFC7A1C24B8482D /* Pods_SimplePingExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2EB1A871878535C5A9372FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A72100309961CE6872C61ACF /* Pods-SimplePingExample.debug.xcconfig */,
+				005E1D602CDBD003CB5A823B /* Pods-SimplePingExample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B0D59F8680EAA443305EC454 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD193A531CFFDD17D0A0D8D7 /* Pods_SimplePingExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C7118EF12919EDB000C0D101 = {
 			isa = PBXGroup;
 			children = (
 				C7118EFC2919EDB000C0D101 /* SimplePingExample */,
 				C7118EFB2919EDB000C0D101 /* Products */,
+				A2EB1A871878535C5A9372FE /* Pods */,
+				B0D59F8680EAA443305EC454 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +109,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7118F0E2919EDB200C0D101 /* Build configuration list for PBXNativeTarget "SimplePingExample" */;
 			buildPhases = (
+				FD70E0CDBF69171E81D4EA0F /* [CP] Check Pods Manifest.lock */,
 				C7118EF62919EDB000C0D101 /* Sources */,
 				C7118EF72919EDB000C0D101 /* Frameworks */,
 				C7118EF82919EDB000C0D101 /* Resources */,
@@ -114,7 +140,7 @@
 				};
 			};
 			buildConfigurationList = C7118EF52919EDB000C0D101 /* Build configuration list for PBXProject "SimplePingExample" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -143,6 +169,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FD70E0CDBF69171E81D4EA0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimplePingExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C7118EF62919EDB000C0D101 /* Sources */ = {
@@ -295,6 +346,7 @@
 		};
 		C7118F0F2919EDB200C0D101 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A72100309961CE6872C61ACF /* Pods-SimplePingExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,6 +378,7 @@
 		};
 		C7118F102919EDB200C0D101 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 005E1D602CDBD003CB5A823B /* Pods-SimplePingExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
